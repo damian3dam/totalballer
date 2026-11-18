@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Total Baller | Elite Football Training by Stuart Sloan</title>
+<meta name="description" content="The Total Baller: elite football training with Head Coach Stuart Sloan. Private, 2-on-1 and small group sessions, clinics, camps and off-season programs in Los Angeles. Earned. Not Given.">
+<meta property="og:title" content="The Total Baller | Elite Football Training">
+<meta property="og:description" content="Developing complete players. Technical | Performance | Mindset. Earned. Not Given.">
+<meta property="og:url" content="https://totalballer.com">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://totalballer.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://totalballer.com/">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%230a0a0a'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial Black,Arial' font-style='italic' font-weight='900' font-size='26' fill='%23fff'>TB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0a; --bg2:#141414; --line:#262626; --text:#f5f5f5; --muted:#a1a1a1;
+    --accent:#ffffff; --accent-ink:#0a0a0a; --pop:#d4ff3a;
+    --display:'Anton', Impact, 'Arial Narrow Bold', sans-serif;
+    --body:'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    --wrap:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:clip}
+  body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+  .eyebrow{font-weight:800;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--pop)}
+  h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+  h2{font-size:clamp(2.6rem,6vw,4.6rem);margin:.4rem 0 1.2rem}
+  .lead{color:var(--muted);font-size:1.1rem;max-width:60ch}
+  .btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.6rem;border-radius:999px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;transition:transform .15s ease, background .15s ease, color .15s ease;border:2px solid var(--accent)}
+  .btn-primary{background:var(--accent);color:var(--accent-ink)}
+  .btn-primary:hover{transform:translateY(-2px)}
+  .btn-ghost{color:var(--text);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--accent)}
+
+  /* Logo mark: placeholder for Stuart's real TB logo file */
+  .mark{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#fff;color:#0a0a0a;font-family:var(--display);font-style:italic;font-size:1.15rem;letter-spacing:-.02em}
+  .logo{display:flex;align-items:center;gap:.7rem;font-family:var(--display);font-size:1.4rem;letter-spacing:.02em;text-transform:uppercase}
+
+  header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .2s ease, border-color .2s ease;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(10,10,10,.88);backdrop-filter:blur(10px);border-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .nav ul{display:flex;gap:2rem;list-style:none;font-weight:600;font-size:.92rem}
+  .nav ul a{color:var(--muted)}
+  .nav ul a:hover{color:var(--text)}
+  .nav .btn{padding:.7rem 1.2rem}
+  .menu-btn{display:none;background:none;border:0;color:var(--text);font-size:1.6rem;cursor:pointer}
+
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:140px 0 80px;overflow:hidden;isolation:isolate}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-2;
+    background:radial-gradient(55% 60% at 80% 35%, rgba(255,255,255,.10), transparent 60%),
+               radial-gradient(40% 40% at 10% 95%, rgba(212,255,58,.10), transparent 60%), var(--bg)}
+  .pitch{position:absolute;right:-8vw;top:50%;transform:translateY(-50%);width:min(820px,85vw);z-index:-1;opacity:.35}
+  .hero h1{font-size:clamp(4.2rem,15vw,12.5rem);margin:.6rem 0 1.4rem}
+  .hero h1 .outline{color:transparent;-webkit-text-stroke:2px var(--text)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+  .hero-meta{display:flex;gap:2.5rem;margin-top:3.5rem;flex-wrap:wrap}
+  .hero-meta div{border-left:2px solid var(--pop);padding-left:1rem}
+  .hero-meta strong{display:block;font-family:var(--display);font-size:2.2rem;font-weight:400;line-height:1}
+  .hero-meta span{color:var(--muted);font-size:.85rem}
+
+  .marquee{background:#fff;color:#0a0a0a;overflow:hidden;white-space:nowrap;transform:rotate(-1.2deg);margin:-10px -20px 0}
+  .marquee-track{display:inline-flex;gap:2.5rem;padding:1rem 0;animation:scroll 30s linear infinite;font-family:var(--display);font-size:1.7rem;text-transform:uppercase}
+  .marquee-track span::after{content:"⚽";margin-left:2.5rem;font-size:1rem;vertical-align:middle}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  section{padding:120px 0}
+
+  .about-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:center}
+  .portrait{aspect-ratio:4/5;border-radius:24px;background:linear-gradient(160deg,#1c1c1c 0%,#0e0e0e 100%);border:1px solid var(--line);position:relative;overflow:hidden;display:grid;place-items:center}
+  .portrait img{width:100%;height:100%;object-fit:cover}
+  .portrait .initials{font-family:var(--display);font-style:italic;font-size:10rem;color:#1d1d1d;-webkit-text-stroke:1px #3a3a3a}
+  .portrait .tag{position:absolute;left:20px;bottom:20px;background:#fff;color:#0a0a0a;font-weight:800;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;padding:.5rem .9rem;border-radius:999px}
+  .about p+p{margin-top:1rem}
+  .about .sig{margin-top:2rem;font-family:var(--display);font-size:1.6rem;text-transform:uppercase}
+  .team{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+  .team span{border:1px solid var(--line);border-radius:999px;padding:.45rem .9rem;font-size:.85rem;color:var(--muted)}
+  .team b{color:var(--text);font-weight:600}
+
+  .band{background:var(--bg2);border-block:1px solid var(--line)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:3rem}
+  .card{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:32px;transition:border-color .2s ease, transform .2s ease}
+  .card:hover{border-color:#fff;transform:translateY(-4px)}
+  .card .num{font-family:var(--display);font-size:1rem;color:var(--pop);letter-spacing:.1em}
+  .card h3{font-size:2.1rem;margin:1rem 0 .8rem}
+  .card p{color:var(--muted)}
+  .card ul{list-style:none;margin-top:1.2rem;display:grid;gap:.5rem;font-weight:500;font-size:.95rem}
+  .card li::before{content:"→ ";color:var(--pop)}
+
+  .programs-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:3rem}
+  .plan{border:1px solid var(--line);border-radius:20px;padding:32px;display:flex;flex-direction:column;background:var(--bg2)}
+  .plan.featured{background:#fff;color:#0a0a0a;border-color:#fff}
+  .plan.featured .plan-desc,.plan.featured li,.plan.featured .packs{color:#3a3a3a}
+  .plan h3{font-size:1.9rem}
+  .plan .price{font-family:var(--display);font-size:3.2rem;margin:1rem 0 .2rem;line-height:1}
+  .plan .price small{font-family:var(--body);font-size:.9rem;font-weight:600;opacity:.7}
+  .plan-desc{color:var(--muted);font-size:.95rem}
+  .packs{font-size:.9rem;color:var(--muted);margin-top:.8rem;font-weight:600}
+  .plan ul{list-style:none;margin:1.5rem 0 2rem;display:grid;gap:.6rem;font-size:.95rem;color:var(--muted)}
+  .plan li::before{content:"✓  ";font-weight:800}
+  .plan .actions{margin-top:auto;display:grid;gap:.6rem}
+  .plan .btn{justify-content:center}
+  .plan.featured .btn-primary{background:#0a0a0a;color:#fff;border-color:#0a0a0a}
+  .badge{align-self:flex-start;background:#0a0a0a;color:var(--pop);font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:.35rem .7rem;border-radius:999px;margin-bottom:1rem}
+  .policy{margin-top:1.6rem;color:var(--muted);font-size:.88rem}
+
+  .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:3rem}
+  .review{border:1px solid var(--line);border-radius:20px;padding:28px;background:var(--bg)}
+  .stars{color:var(--pop);letter-spacing:.15em;font-size:1rem}
+  .review p{margin:.9rem 0 1.2rem;font-size:1.02rem}
+  .review cite{font-style:normal;color:var(--muted);font-size:.85rem;font-weight:600}
+
+  .merch{background:#f5f5f5;color:#0a0a0a;border-radius:28px;padding:64px;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;overflow:hidden}
+  .merch .eyebrow{color:#0a0a0a;opacity:.6}
+  .merch h2{margin-bottom:1rem}
+  .merch p{color:#3a3a3a;max-width:46ch}
+  .merch .btn-primary{background:#0a0a0a;color:#fff;border-color:#0a0a0a;margin-top:1.6rem}
+  .signup{display:flex;gap:.6rem;margin-top:1.4rem;flex-wrap:wrap}
+  .signup input{flex:1 1 220px;padding:1rem 1.2rem;border-radius:999px;border:2px solid #d4d4d4;background:#fff;color:#0a0a0a;font:inherit}
+  .signup button{padding:1rem 1.5rem;border-radius:999px;border:2px solid #0a0a0a;background:transparent;color:#0a0a0a;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;cursor:pointer}
+  .form-note{font-size:.85rem;margin-top:.8rem;min-height:1.2em}
+  .kit{width:100%;max-width:340px;justify-self:center;filter:drop-shadow(0 30px 40px rgba(0,0,0,.25));transform:rotate(-6deg)}
+
+  .social-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:3rem}
+  .tile{aspect-ratio:1;border-radius:18px;border:1px solid var(--line);background:var(--bg2);display:flex;flex-direction:column;justify-content:space-between;padding:22px;transition:border-color .2s, background .2s}
+  .tile:hover{border-color:#fff;background:#191919}
+  .tile svg{width:34px;height:34px}
+  .tile strong{font-family:var(--display);font-weight:400;font-size:1.6rem;text-transform:uppercase;display:block;line-height:1}
+  .tile span{color:var(--muted);font-size:.85rem}
+
+  .contact{display:grid;grid-template-columns:1fr 1.1fr;gap:64px}
+  .contact-info dl{margin-top:2rem;display:grid;gap:1.4rem}
+  .contact-info dt{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .contact-info dd{font-size:1.1rem;font-weight:600;margin-top:.2rem}
+  .contact-info dd a{border-bottom:1px solid var(--line)}
+  .contact-info dd a:hover{border-color:#fff}
+  form.enquiry{background:var(--bg2);border:1px solid var(--line);border-radius:24px;padding:36px;display:grid;gap:16px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  label{display:grid;gap:.4rem;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  input,select,textarea{font:inherit;font-size:1rem;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;text-transform:none;letter-spacing:0;font-weight:400}
+  input:focus,select:focus,textarea:focus{outline:2px solid #fff;outline-offset:1px;border-color:transparent}
+  textarea{min-height:130px;resize:vertical}
+  form.enquiry .btn{justify-content:center;cursor:pointer;font-family:inherit}
+
+  footer{border-top:1px solid var(--line);padding:48px 0;color:var(--muted);font-size:.9rem}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+  .foot .logo{color:var(--text)}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.marquee-track{animation:none}}
+
+  @media (max-width:960px){
+    .about-grid,.contact,.merch{grid-template-columns:1fr}
+    .cards,.plans,.reviews{grid-template-columns:1fr}
+    .social-grid{grid-template-columns:repeat(2,1fr)}
+    .merch{padding:40px 28px}
+    .kit{max-width:240px}
+    section{padding:88px 0}
+  }
+  @media (max-width:760px){
+    .wrap{padding:0 16px}
+    .nav ul,.nav .btn{display:none}
+    .menu-btn{display:block}
+    .nav.open ul{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--bg);padding:24px 16px;border-bottom:1px solid var(--line);gap:1.2rem}
+    .row{grid-template-columns:1fr}
+    .hero-meta{gap:1.5rem}
+    form.enquiry{padding:24px}
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav" id="nav">
+    <!-- TODO: replace .mark with Stuart's real TB logo: <img src="logo.png" alt="The Total Baller" width="40" height="40"> -->
+    <a href="#" class="logo"><span class="mark">TB</span>Total Baller</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#offszn">Off SZN LA</a></li>
+      <li><a href="#merch">Shop</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://tenpo.com/o/the-total-baller" class="btn btn-primary" target="_blank" rel="noopener">Book training</a>
+    <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <svg class="pitch" viewBox="0 0 600 400" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true">
+      <rect x="10" y="10" width="580" height="380" rx="4" stroke-opacity=".5"/>
+      <path d="M300 10v380" stroke-opacity=".5"/>
+      <circle cx="300" cy="200" r="60" stroke-opacity=".5"/>
+      <rect x="10" y="110" width="80" height="180" stroke-opacity=".4"/>
+      <rect x="510" y="110" width="80" height="180" stroke-opacity=".4"/>
+      <rect x="10" y="160" width="28" height="80" stroke-opacity=".3"/>
+      <rect x="562" y="160" width="28" height="80" stroke-opacity=".3"/>
+    </svg>
+    <div class="wrap">
+      <p class="eyebrow">Elite football training · Head Coach Stuart Sloan</p>
+      <h1><span class="outline">The Total</span><br>Baller</h1>
+      <p class="lead">Developing complete players. High-level soccer development through private training, small groups, clinics, camps and pickup, for every age and level from young beginners to academy, college and pro athletes.</p>
+      <div class="hero-cta">
+        <a href="https://tenpo.com/o/the-total-baller" class="btn btn-primary" target="_blank" rel="noopener">Book a session →</a>
+        <a href="#offszn" class="btn btn-ghost">Off SZN LA programs</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>107K</strong><span>Instagram followers</span></div>
+        <div><strong>5.0 ★</strong><span>Rated by players and parents</span></div>
+        <div><strong>Worldwide</strong><span>Based in Los Angeles</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Earned. Not given.</span><span>Technical</span><span>Performance</span><span>Mindset</span><span>Developing complete players</span>
+      <span>Earned. Not given.</span><span>Technical</span><span>Performance</span><span>Mindset</span><span>Developing complete players</span>
+    </div>
+  </div>
+
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div class="portrait reveal">
+        <!-- TODO: add a photo of Stuart coaching: <img src="stuart.jpg" alt="Stuart Sloan coaching a player"> -->
+        <div class="initials">TB</div>
+        <div class="tag">Stuart Sloan · Head Coach</div>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">Meet the coach</p>
+        <h2>Stuart Sloan</h2>
+        <p class="lead">Stuart is the founder and Head Coach of The Total Baller. His coaching blends technical development, athletic performance and a positive mindset to help every player improve with confidence.</p>
+        <p class="lead">Sessions are challenging, high-energy and game-realistic, built around each player's position, ability and goals. Over 100,000 players follow his drills and training online, and on the field his team works with everyone from young beginners to college and professional athletes.</p>
+        <p class="sig">Earned. Not given.</p>
+        <div class="team" aria-label="Coaching team">
+          <span><b>Stuart Sloan</b> · Head Coach</span>
+          <span><b>Gregg Megaw</b> · Coach / Trainer</span>
+          <span><b>Bradley Rowbotham</b> · Coach</span>
+          <span><b>Vardan Ghazaryan</b> · Foundation Coach</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="what" class="band">
+    <div class="wrap">
+      <p class="eyebrow">How we train</p>
+      <h2>Technical. Performance. Mindset.</h2>
+      <p class="lead">Every Total Baller session works on all three, because complete players need all three.</p>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="num">01</div>
+          <h3>Technical</h3>
+          <p>Maximum repetitions on the ball, built around your position.</p>
+          <ul><li>First touch and ball mastery</li><li>Passing, finishing and 1v1</li><li>Position-specific work</li></ul>
+        </article>
+        <article class="card reveal">
+          <div class="num">02</div>
+          <h3>Performance</h3>
+          <p>The athletic side of the game, trained the way it shows up in matches.</p>
+          <ul><li>Speed and agility</li><li>Movement and decision-making</li><li>Game-realistic situations</li></ul>
+        </article>
+        <article class="card reveal">
+          <div class="num">03</div>
+          <h3>Mindset</h3>
+          <p>Confidence and habits that last beyond the session.</p>
+          <ul><li>A personal training plan</li><li>Progress tracked over time</li><li>Consistency that delivers results</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="training">
+    <div class="wrap">
+      <div class="programs-head">
+        <div>
+          <p class="eyebrow">Training in Los Angeles</p>
+          <h2>Book your sessions</h2>
+        </div>
+        <p class="lead" style="max-width:42ch">60-minute coach-led sessions at Tommy's Field Westwood and other LA venues. Booking and payment are handled securely on Tenpo.</p>
+      </div>
+      <div class="plans">
+        <div class="plan reveal">
+          <h3>1-on-1</h3>
+          <div class="price">$130<small> / session</small></div>
+          <p class="plan-desc">Personalized training designed around your position, ability and goals.</p>
+          <p class="packs">5 sessions $600 · 10 sessions $1,200</p>
+          <ul><li>Assessment and personal plan</li><li>Technical and athletic development</li><li>Progress tracked across every session</li></ul>
+          <div class="actions"><a href="https://tenpo.com/o/the-total-baller" class="btn btn-ghost" target="_blank" rel="noopener">Book 1-on-1</a></div>
+        </div>
+        <div class="plan featured reveal">
+          <span class="badge">Train with a teammate</span>
+          <h3>2-on-1</h3>
+          <div class="price">$160<small> / session</small></div>
+          <p class="plan-desc">Two players, one coach. Competitive, partner-based and high-energy.</p>
+          <p class="packs">5 sessions $750 · 10 sessions $1,500</p>
+          <ul><li>Individual feedback for both players</li><li>Combination play and finishing</li><li>Perfect for siblings and teammates</li></ul>
+          <div class="actions"><a href="https://tenpo.com/o/the-total-baller" class="btn btn-primary" target="_blank" rel="noopener">Book 2-on-1</a></div>
+        </div>
+        <div class="plan reveal">
+          <h3>Groups &amp; camps</h3>
+          <div class="price" style="font-size:2.4rem">Small groups, clinics, camps &amp; pickup</div>
+          <p class="plan-desc">Team-style sessions for players of all ages and levels.</p>
+          <ul><li>Small group training</li><li>Clinics and holiday camps</li><li>Pickup sessions</li></ul>
+          <div class="actions"><a href="https://tenpo.com/o/the-total-baller" class="btn btn-ghost" target="_blank" rel="noopener">See upcoming events</a></div>
+        </div>
+      </div>
+      <p class="policy">New to Total Baller? Complete the <a href="https://forms.gle/b3KfiGBUv1JbJoGR9" target="_blank" rel="noopener"><u>new client onboarding form</u></a> and the <a href="https://forms.gle/ahd2jGB5CbMGzNxt9" target="_blank" rel="noopener"><u>registration and liability waiver</u></a> before your first session. Free reschedule or cancellation up to 24 hours before a session.</p>
+    </div>
+  </section>
+
+  <section id="offszn" class="band">
+    <div class="wrap">
+      <p class="eyebrow">Limited availability</p>
+      <h2>Off SZN LA</h2>
+      <p class="lead">Off-season training in Los Angeles for college and professional players who want to come back sharper, fitter and more confident. Places are limited, so apply below.</p>
+      <div class="cards" style="grid-template-columns:repeat(2,1fr)">
+        <article class="card reveal">
+          <div class="num">College</div>
+          <h3>College players</h3>
+          <p>Stay sharp between seasons with high-intensity, position-specific work.</p>
+          <a href="https://forms.gle/uJjQQKEhsGYhQ62Z6" class="btn btn-primary" style="margin-top:1.6rem" target="_blank" rel="noopener">Apply: College →</a>
+        </article>
+        <article class="card reveal">
+          <div class="num">Pro</div>
+          <h3>Pro players</h3>
+          <p>Elite off-season preparation to arrive at pre-season ready to perform.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOdEnnf_kCw3o04PEsKhy-xwsz2eKxpOsIagHZL406JI59Hg/viewform" class="btn btn-primary" style="margin-top:1.6rem" target="_blank" rel="noopener">Apply: Pro →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <p class="eyebrow">5.0 from players and parents</p>
+      <h2>What families say</h2>
+      <div class="reviews">
+        <figure class="review reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Stuart is an exceptional coach! Every session is engaging, enjoyable, and something my son genuinely looks forward to."</p>
+          <cite>Barbara G.</cite>
+        </figure>
+        <figure class="review reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Total Baller is the best in the business! My daughter loves her weekly sessions and I've seen so much improvement in her game."</p>
+          <cite>Hanna W.</cite>
+        </figure>
+        <figure class="review reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Coach Bradley was wonderful. He stayed focused on our child from beginning to end."</p>
+          <cite>Maria K.</cite>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="merch" style="padding-top:0">
+    <div class="wrap">
+      <div class="merch reveal">
+        <div>
+          <p class="eyebrow">Shop</p>
+          <h2>Wear the badge</h2>
+          <p>The TB Tiro26 Competition Match Day Jersey is available now. More Total Baller training gear is on the way, so join the list to hear first about new drops.</p>
+          <a href="https://www.nikys-sports.com/products/tb" class="btn btn-primary" target="_blank" rel="noopener">Shop the jersey →</a>
+          <form class="signup" id="signup" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="waitlist"><input name="bot-field" hidden>
+            <input type="email" name="email" placeholder="Your email for new drops" required aria-label="Email address">
+            <button type="submit">Notify me</button>
+          </form>
+          <p class="form-note" id="signup-note"></p>
+        </div>
+        <svg class="kit" viewBox="0 0 300 300" aria-hidden="true">
+          <path d="M95 30l-65 35 25 55 30-12v162h130V108l30 12 25-55-65-35c-8 20-30 32-55 32s-47-12-55-32z" fill="#0a0a0a"/>
+          <path d="M85 108v8M215 108v8" stroke="#fff" stroke-width="3"/>
+          <circle cx="150" cy="150" r="34" fill="#fff"/>
+          <text x="150" y="163" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-style="italic" font-size="34" fill="#0a0a0a">TB</text>
+          <text x="150" y="225" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="18" letter-spacing="3" fill="#fff">TOTAL BALLER</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="follow" style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">107K and counting</p>
+      <h2>Train with us online</h2>
+      <div class="social-grid">
+        <a class="tile reveal" href="https://www.instagram.com/totalballertraining" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          <div><strong>Instagram</strong><span>@totalballertraining</span></div>
+        </a>
+        <a class="tile reveal" href="https://www.tiktok.com/@totalballertraining" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 2.8 2.4 4.6 5 5"/></svg>
+          <div><strong>TikTok</strong><span>@totalballertraining</span></div>
+        </a>
+        <a class="tile reveal" href="https://www.youtube.com/@totalballertraining" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg>
+          <div><strong>YouTube</strong><span>@totalballertraining</span></div>
+        </a>
+        <a class="tile reveal" href="https://www.facebook.com/thetotalballer" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>
+          <div><strong>Facebook</strong><span>The Total Baller</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="band">
+    <div class="wrap contact">
+      <div class="contact-info reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Let's work</h2>
+        <p class="lead">Training questions, camps for your club, brand partnerships or media. Send a message and the team will get back to you.</p>
+        <dl>
+          <div><dt>Book training</dt><dd><a href="https://tenpo.com/o/the-total-baller" target="_blank" rel="noopener">tenpo.com/o/the-total-baller</a></dd></div>
+          <!-- TODO: confirm Stuart's real inbox -->
+          <div><dt>Email</dt><dd><a href="mailto:hello@totalballer.com">hello@totalballer.com</a></dd></div>
+          <div><dt>Based in</dt><dd>Los Angeles, CA · Westwood &amp; Playa Vista</dd></div>
+        </dl>
+      </div>
+      <form class="enquiry reveal" id="enquiry" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="enquiry"><input name="bot-field" hidden>
+        <div class="row">
+          <label>Name<input name="name" required autocomplete="name"></label>
+          <label>Email<input type="email" name="email" required autocomplete="email"></label>
+        </div>
+        <label>I'm interested in
+          <select name="topic">
+            <option>1-on-1 or 2-on-1 training</option>
+            <option>Small groups, clinics or camps</option>
+            <option>Off SZN LA (college or pro)</option>
+            <option>Camps for my club or team</option>
+            <option>Brand partnership or media</option>
+            <option>Merch</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>Message<textarea name="message" required placeholder="Tell us about the player: age, position, level and goals"></textarea></label>
+        <button class="btn btn-primary" type="submit">Send message →</button>
+        <p class="form-note" id="enquiry-note"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#" class="logo"><span class="mark">TB</span>Total Baller</a>
+    <span>© <span id="yr">2026</span> The Total Baller. Earned. Not given.</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+  const CONTACT_EMAIL = 'hello@totalballer.com'; // TODO: Stuart's real inbox
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const header = document.querySelector('header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+  document.querySelectorAll('.nav ul a').forEach(a => a.addEventListener('click', () => document.getElementById('nav').classList.remove('open')));
+
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {threshold:.12}) : null;
+  document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+
+  // Forms post to Netlify Forms when hosted there; anywhere else they fall back to the visitor's email app.
+  async function submitForm(form, note, okMsg, mailSubject, mailBody){
+    try{
+      const r = await fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(new FormData(form)).toString()});
+      if(!r.ok) throw new Error(r.status);
+      note.textContent = okMsg; form.reset();
+    }catch(err){
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+      note.textContent = 'Your email app should open to send this.';
+    }
+  }
+  document.getElementById('signup').addEventListener('submit', e => {
+    e.preventDefault(); const f = e.target;
+    submitForm(f, document.getElementById('signup-note'), "You're on the list. We'll be in touch.", 'Merch drops list', 'Add me to the Total Baller merch list: ' + f.email.value);
+  });
+  document.getElementById('enquiry').addEventListener('submit', e => {
+    e.preventDefault(); const f = e.target;
+    submitForm(f, document.getElementById('enquiry-note'), "Thanks! We'll get back to you soon.", 'Total Baller enquiry: ' + f.topic.value,
+      `Name: ${f.name.value}\nEmail: ${f.email.value}\nTopic: ${f.topic.value}\n\n${f.message.value}`);
+  });
+</script>
+</body>
+</html>
