@@ -67,16 +67,24 @@
   .nav-right{display:flex;align-items:center;gap:14px}
   .menu-btn{display:none;background:none;border:0;color:var(--text);font-size:1.6rem;cursor:pointer}
 
-  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:140px 0 80px;overflow:hidden;isolation:isolate}
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:120px 0 56px;overflow:hidden;isolation:isolate}
   .hero::before{content:"";position:absolute;inset:0;z-index:-2;
     background:radial-gradient(55% 60% at 80% 35%, rgba(255,255,255,.10), transparent 60%),
                radial-gradient(40% 40% at 10% 95%, rgba(212,255,58,.10), transparent 60%), var(--bg)}
   .hero-bg{position:absolute;right:0;top:0;height:100%;width:62%;object-fit:cover;z-index:-1;opacity:.55;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 55%);mask-image:linear-gradient(to right,transparent 0%,#000 55%)}
   .pitch{display:none;position:absolute;right:-8vw;top:50%;transform:translateY(-50%);width:min(820px,85vw);z-index:-1;opacity:.35}
-  .hero h1{font-size:clamp(4.2rem,15vw,12.5rem);margin:.6rem 0 1.4rem}
+  .hero .wrap{width:100%}
+  .hero h1{font-size:clamp(3.4rem,10vw,7.6rem);margin:.5rem 0 1rem}
+  .hero .lead{max-width:40rem}
+  .hero .lead strong{color:var(--text)}
+  .hero-proof{margin:1.6rem 0 0;max-width:34rem;padding:16px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(10,10,10,.55);backdrop-filter:blur(6px)}
+  .hero-proof .stars{color:var(--pop);letter-spacing:.15em;font-size:.9rem}
+  .hero-proof blockquote{margin:.4rem 0;font-size:1rem}
+  .hero-proof figcaption{color:var(--muted);font-size:.82rem}
+  .hero-proof a{color:var(--text);text-decoration:underline;text-underline-offset:3px}
   .hero h1 .outline{color:transparent;-webkit-text-stroke:2px var(--text)}
   .hero-cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
-  .hero-meta{display:flex;gap:2.5rem;margin-top:3.5rem;flex-wrap:wrap}
+  .hero-meta{display:flex;gap:2.5rem;margin:1.8rem 0 1.4rem;flex-wrap:wrap}
   .hero-meta div{border-left:2px solid var(--pop);padding-left:1rem}
   .hero-meta strong{display:block;font-family:var(--display);font-size:2.2rem;font-weight:400;line-height:1}
   .hero-meta span{color:var(--muted);font-size:.85rem}
@@ -251,19 +259,25 @@
       <rect x="562" y="160" width="28" height="80" stroke-opacity=".3"/>
     </svg>
     <div class="wrap">
-      <p class="eyebrow">Elite football training · Head Coach Stuart Sloan</p>
-      <h1><span class="outline">The Total</span><br>Baller</h1>
-      <p class="lead">Developing complete players. High-level soccer development through private training, small groups, clinics, camps and pickup, for every age and level from young beginners to academy, college and pro athletes.</p>
+      <p class="eyebrow">Los Angeles · Elite football training with Head Coach Stuart Sloan</p>
+      <h1><span class="outline">Earned.</span><br>Not given.</h1>
+      <p class="lead">1-on-1 training, small groups, camps and clinics that build <strong>complete players</strong>: sharper technique, game speed and the confidence to use them. For every level, from first-timers to academy, college and pro.</p>
       <div class="hero-cta">
         <a href="https://tenpo.com/o/the-total-baller" class="btn btn-primary" target="_blank" rel="noopener">Book a session →</a>
-        <a href="#offszn" class="btn btn-ghost">Off SZN LA programs</a>
+        <a href="#camps" class="btn btn-ghost">Holiday camps from $275</a>
+      </div>
+      <figure class="hero-proof">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Every session is engaging, enjoyable, and something my son genuinely looks forward to."</blockquote>
+        <figcaption>Barbara G., Total Baller parent · <a href="#reviews">More reviews</a></figcaption>
+      </figure>
+      <div class="hero-meta">
+        <div><strong>107K</strong><span>Follow the training on Instagram</span></div>
+        <div><strong>5.0 ★</strong><span>Rated by players and parents</span></div>
+        <div><strong>4 coaches</strong><span>Led by Stuart Sloan</span></div>
+        <div><strong>Ages 6+</strong><span>Beginner to pro</span></div>
       </div>
       <div class="socials socials-lg"><a href="https://www.instagram.com/totalballertraining" target="_blank" rel="noopener" aria-label="Instagram" class="si si-instagram"><svg><use href="#i-instagram"/></svg></a><a href="https://www.tiktok.com/@totalballertraining" target="_blank" rel="noopener" aria-label="TikTok" class="si si-tiktok"><svg><use href="#i-tiktok"/></svg></a><a href="https://www.youtube.com/@totalballertraining" target="_blank" rel="noopener" aria-label="YouTube" class="si si-youtube"><svg><use href="#i-youtube"/></svg></a><a href="https://www.facebook.com/thetotalballer" target="_blank" rel="noopener" aria-label="Facebook" class="si si-facebook"><svg><use href="#i-facebook"/></svg></a></div>
-      <div class="hero-meta">
-        <div><strong>107K</strong><span>Instagram followers</span></div>
-        <div><strong>5.0 ★</strong><span>Rated by players and parents</span></div>
-        <div><strong>Worldwide</strong><span>Based in Los Angeles</span></div>
-      </div>
     </div>
   </section>
 
