@@ -9,11 +9,14 @@
 <meta property="og:description" content="Developing complete players. Technical | Performance | Mindset. Earned. Not Given.">
 <meta property="og:url" content="https://totalballer.com">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://totalballer.com/og.jpg">
+<meta property="og:image" content="https://damian3dam.github.io/totalballer/og.jpg">
+<meta property="og:image:alt" content="The Total Baller: Earned. Not Given.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://totalballer.com/">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%230a0a0a'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial Black,Arial' font-style='italic' font-weight='900' font-size='26' fill='%23fff'>TB</text></svg>">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SportsActivityLocation", "name": "The Total Baller", "description": "Elite football (soccer) training in Los Angeles with Head Coach Stuart Sloan: 1-on-1, 2-on-1, small groups, clinics, holiday camps and off-season programs.", "url": "https://totalballer.com/", "image": "https://damian3dam.github.io/totalballer/og.jpg", "logo": "https://damian3dam.github.io/totalballer/images/logo.jpg", "priceRange": "$130 - $1,500", "areaServed": "Los Angeles, CA", "address": {"@type": "PostalAddress", "addressLocality": "Los Angeles", "addressRegion": "CA", "addressCountry": "US"}, "founder": {"@type": "Person", "name": "Stuart Sloan", "jobTitle": "Head Coach"}, "sameAs": ["https://www.instagram.com/totalballertraining", "https://www.tiktok.com/@totalballertraining", "https://www.youtube.com/@totalballertraining", "https://www.facebook.com/thetotalballer", "https://tenpo.com/o/the-total-baller"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I book and pay?", "acceptedAnswer": {"@type": "Answer", "text": "Pick a session on our booking page, choose a time and pay securely online. Booking and payment run on Tenpo."}}, {"@type": "Question", "name": "Can I cancel or reschedule?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can cancel or reschedule for free up to 24 hours before your session."}}, {"@type": "Question", "name": "What ages and levels do you coach?", "acceptedAnswer": {"@type": "Answer", "text": "Players from age 6 up to college and professional level. Holiday camps are for ages 6 to 15, grouped by age and ability."}}, {"@type": "Question", "name": "Where do sessions take place?", "acceptedAnswer": {"@type": "Answer", "text": "Private sessions run at Tommy's Field Westwood and other venues around Los Angeles, including Westwood and Playa Vista. Holiday camps are at Formula Soccer Center in Van Nuys."}}, {"@type": "Question", "name": "What should my player bring?", "acceptedAnswer": {"@type": "Answer", "text": "Water, shin guards, suitable footwear for the surface and a light snack for camps."}}, {"@type": "Question", "name": "Do packages save money?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. 1-on-1 is $130 a session, or $600 for 5 and $1,200 for 10. 2-on-1 is $160 a session, or $750 for 5 and $1,500 for 10."}}, {"@type": "Question", "name": "Can my player train with a friend?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Book a 2-on-1 session and two players share one coach for competitive, partner-based work. It's great for siblings and teammates."}}, {"@type": "Question", "name": "What do I need before the first session?", "acceptedAnswer": {"@type": "Answer", "text": "New players fill in the onboarding form and the registration and liability waiver."}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
@@ -109,6 +112,7 @@
 
   .band{background:var(--bg2);border-block:1px solid var(--line)}
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:3rem}
+  .cards-2{grid-template-columns:repeat(2,1fr)}
   .card{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:32px;transition:border-color .2s ease, transform .2s ease}
   .card:hover{border-color:#fff;transform:translateY(-4px)}
   .card .num{font-family:var(--display);font-size:1rem;color:var(--pop);letter-spacing:.1em}
@@ -213,6 +217,27 @@
   .book iframe{flex:1;width:100%;border:0;background:#fff}
   @media (max-width:760px){.book{padding:0}.book-panel{border-radius:0;height:100%}.book-bar small{display:none}}
   body.no-scroll{overflow:hidden}
+  @media (max-width:420px){.tile{padding:18px}.tile strong{font-size:1.3rem}}
+  /* Mobile book bar */
+  .mbook{display:none}
+  @media (max-width:760px){
+    .mbook{display:flex;align-items:center;gap:12px;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:40;padding:10px 10px 10px 18px;border-radius:999px;background:rgba(10,10,10,.86);border:1px solid #2e2e2e;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transform:translateY(140%);transition:transform .5s var(--ease)}
+    .mbook.show{transform:none}
+    .mbook span{font-size:.82rem;color:var(--muted);line-height:1.2;margin-right:auto}
+    .mbook span b{display:block;color:var(--text);font-size:.95rem}
+    .mbook .btn{padding:.8rem 1.2rem;font-size:.78rem}
+    footer{padding-bottom:96px}
+  }
+  /* FAQ */
+  .faq{max-width:860px;margin-top:2.4rem;border-top:1px solid var(--line)}
+  .faq details{border-bottom:1px solid var(--line)}
+  .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-weight:600;font-size:1.05rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-family:var(--display);font-size:1.6rem;line-height:1;transition:transform .35s var(--ease)}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq details p{color:var(--muted);padding:0 0 22px;max-width:70ch}
+  .faq details p a{color:var(--text);border-bottom:1px solid currentColor}
+  @media (prefers-reduced-motion:reduce){.mbook{transition:none}}
   /* Motion */
   section,[id]{scroll-margin-top:76px}
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease), transform .9s var(--ease);transition-delay:var(--d,0ms);will-change:opacity,transform}
@@ -242,7 +267,7 @@
 
   @media (max-width:960px){
     .about-grid,.contact,.merch{grid-template-columns:1fr}
-    .cards,.plans,.reviews{grid-template-columns:1fr}
+    .cards,.cards-2,.plans,.reviews{grid-template-columns:1fr}
     .camps{grid-template-columns:repeat(2,1fr)}
     .social-grid,.gallery{grid-template-columns:repeat(2,1fr)}
     .offszn-top{grid-template-columns:1fr}
@@ -276,6 +301,7 @@
       <li><a href="#camps">Camps</a></li>
       <li><a href="#offszn">Off SZN LA</a></li>
       <li><a href="#merch">Shop</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-right"><div class="socials"><a href="https://www.instagram.com/totalballertraining" target="_blank" rel="noopener" aria-label="Instagram" class="si si-instagram"><svg><use href="#i-instagram"/></svg></a><a href="https://www.tiktok.com/@totalballertraining" target="_blank" rel="noopener" aria-label="TikTok" class="si si-tiktok"><svg><use href="#i-tiktok"/></svg></a><a href="https://www.youtube.com/@totalballertraining" target="_blank" rel="noopener" aria-label="YouTube" class="si si-youtube"><svg><use href="#i-youtube"/></svg></a><a href="https://www.facebook.com/thetotalballer" target="_blank" rel="noopener" aria-label="Facebook" class="si si-facebook"><svg><use href="#i-facebook"/></svg></a></div><a href="https://tenpo.com/o/the-total-baller" class="btn btn-primary" target="_blank" rel="noopener">Book training</a></div>
@@ -465,7 +491,7 @@
         <p class="lead">Off-season training in Los Angeles for college and professional players who want to come back sharper, fitter and more confident. Places are limited, so apply below.</p>
         <img src="images/offszn.jpg" alt="Off SZN LA training graphic" loading="lazy">
       </div>
-      <div class="cards" style="grid-template-columns:repeat(2,1fr)">
+      <div class="cards cards-2">
         <article class="card reveal">
           <div class="num">College</div>
           <h3>College players</h3>
@@ -577,6 +603,23 @@
     </div>
   </section>
 
+  <section id="faq" style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow reveal">Good to know</p>
+      <h2 class="reveal">FAQ</h2>
+      <div class="faq reveal">
+        <details><summary>How do I book and pay?</summary><p>Pick a session on our <a href="https://tenpo.com/o/the-total-baller" target="_blank" rel="noopener">booking page</a>, choose a time and pay securely online. Booking and payment run on Tenpo.</p></details>
+        <details><summary>Can I cancel or reschedule?</summary><p>Yes. You can cancel or reschedule for free up to 24 hours before your session.</p></details>
+        <details><summary>What ages and levels do you coach?</summary><p>Players from age 6 up to college and professional level. Holiday camps are for ages 6 to 15, grouped by age and ability.</p></details>
+        <details><summary>Where do sessions take place?</summary><p>Private sessions run at Tommy's Field Westwood and other venues around Los Angeles, including Westwood and Playa Vista. Holiday camps are at Formula Soccer Center in Van Nuys.</p></details>
+        <details><summary>What should my player bring?</summary><p>Water, shin guards, suitable footwear for the surface and a light snack for camps.</p></details>
+        <details><summary>Do packages save money?</summary><p>Yes. 1-on-1 is $130 a session, or $600 for 5 and $1,200 for 10. 2-on-1 is $160 a session, or $750 for 5 and $1,500 for 10.</p></details>
+        <details><summary>Can my player train with a friend?</summary><p>Yes. Book a 2-on-1 session and two players share one coach for competitive, partner-based work. It's great for siblings and teammates.</p></details>
+        <details><summary>What do I need before the first session?</summary><p>New players fill in the <a href="https://forms.gle/b3KfiGBUv1JbJoGR9" target="_blank" rel="noopener">onboarding form</a> and the <a href="https://forms.gle/ahd2jGB5CbMGzNxt9" target="_blank" rel="noopener">registration and liability waiver</a>.</p></details>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="band">
     <div class="wrap contact">
       <div class="contact-info reveal">
@@ -615,6 +658,8 @@
     </div>
   </section>
 </main>
+
+<div class="mbook" id="mbook" aria-hidden="true"><span><b>Book a session</b>1-on-1 from $130</span><a href="https://tenpo.com/o/the-total-baller" class="btn btn-primary" target="_blank" rel="noopener" tabindex="-1">Book now →</a></div>
 
 <footer>
   <div class="wrap foot">
@@ -677,6 +722,12 @@
   book.querySelector('.book-x').addEventListener('click', closeBook);
   book.addEventListener('click', e => { if (e.target === book) closeBook(); });
   addEventListener('keydown', e => { if (e.key === 'Escape' && book.classList.contains('open')) closeBook(); });
+
+
+  // Mobile book bar: show after the hero, hide near the contact form.
+  const mb = document.getElementById('mbook'), heroEl = document.querySelector('.hero'), contactEl = document.getElementById('contact');
+  const mbUpdate = () => { const on = heroEl.getBoundingClientRect().bottom < 0 && contactEl.getBoundingClientRect().top > innerHeight * .6; mb.classList.toggle('show', on); mb.setAttribute('aria-hidden', on ? 'false' : 'true'); mb.querySelector('a').tabIndex = on ? 0 : -1; };
+  addEventListener('scroll', mbUpdate, {passive:true}); mbUpdate();
 
   // Enquiry: build the message, copy it, then open an Instagram DM to Total Baller.
   document.getElementById('enquiry').addEventListener('submit', async e => {
