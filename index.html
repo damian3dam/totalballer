@@ -200,6 +200,19 @@
   .foot{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
   .foot .logo{color:var(--text)}
 
+  /* Booking sheet */
+  .book{position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(0,0,0,.72);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
+  .book.open{opacity:1;pointer-events:auto}
+  .book-panel{width:min(1040px,100%);height:min(860px,100%);background:#fff;color:#0a0a0a;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transform:translateY(24px) scale(.98);transition:transform .45s var(--ease)}
+  .book.open .book-panel{transform:none}
+  .book-bar{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid #e2e2e2;background:#0a0a0a;color:#fff}
+  .book-bar b{font-family:var(--display);font-weight:400;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;margin-right:auto}
+  .book-bar small{color:#a1a1a1;font-size:.78rem}
+  .book-bar a{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid #fff}
+  .book-x{width:38px;height:38px;border-radius:50%;border:1px solid #3a3a3a;background:none;color:#fff;font-size:1.3rem;line-height:1;cursor:pointer}
+  .book iframe{flex:1;width:100%;border:0;background:#fff}
+  @media (max-width:760px){.book{padding:0}.book-panel{border-radius:0;height:100%}.book-bar small{display:none}}
+  body.no-scroll{overflow:hidden}
   /* Motion */
   section,[id]{scroll-margin-top:76px}
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease), transform .9s var(--ease);transition-delay:var(--d,0ms);will-change:opacity,transform}
@@ -315,8 +328,8 @@
   <section id="about" class="about">
     <div class="wrap about-grid">
       <div class="portrait reveal">
-        <img src="images/coaching-1.jpg" alt="A Total Baller coach running a 1-on-1 session on the pitch" loading="lazy">
-        <div class="tag">Total Baller · 1-on-1 session</div>
+        <img src="images/stuart.jpg" alt="Stuart Sloan, founder and Head Coach of The Total Baller, in the TB adidas kit" loading="lazy" style="object-position:50% 20%">
+        <div class="tag">Stuart Sloan · Head Coach</div>
       </div>
       <div class="reveal">
         <p class="eyebrow">Meet the coach</p>
@@ -517,7 +530,7 @@
         <div>
           <p class="eyebrow">Shop</p>
           <h2>Wear the badge</h2>
-          <p>The TB Tiro26 Competition Match Day Jersey is available now. Next up: the <b>Earned. Not Given.</b> off-pitch collection, released in limited pre-order drops.</p>
+          <p>The TB Tiro26 Competition Match Day Jersey, made by adidas, is available now. Next up: the <b>Earned. Not Given.</b> off-pitch collection, released in limited pre-order drops.</p>
           <div class="merch-cta">
             <a href="https://www.nikys-sports.com/products/tb" class="btn btn-primary" target="_blank" rel="noopener">Shop the jersey →</a>
             <a href="https://ig.me/m/totalballertraining" class="btn btn-dark-ghost" target="_blank" rel="noopener">DM "MERCH" for drop alerts</a>
@@ -612,6 +625,13 @@
   </div>
 </footer>
 
+<div class="book" id="book" role="dialog" aria-modal="true" aria-label="Book with The Total Baller" aria-hidden="true">
+  <div class="book-panel">
+    <div class="book-bar"><b>Book your session</b><small>Secure checkout by Tenpo</small><a id="book-ext" href="https://tenpo.com/o/the-total-baller" target="_blank" rel="noopener">Open in new tab</a><button class="book-x" type="button" aria-label="Close booking">×</button></div>
+    <iframe id="book-frame" title="The Total Baller booking on Tenpo" loading="lazy" allow="payment *"></iframe>
+  </div>
+</div>
+
 <script>
   const DM_URL = 'https://ig.me/m/totalballertraining';
 
@@ -644,6 +664,19 @@
   };
   addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, {passive:true});
   update();
+
+  // Book on the page: Tenpo links open Stuart's Tenpo booking and checkout in a sheet.
+  const book = document.getElementById('book'), frame = document.getElementById('book-frame'), ext = document.getElementById('book-ext');
+  const openBook = url => { if (frame.src !== url) frame.src = url; ext.href = url; book.classList.add('open'); book.setAttribute('aria-hidden','false'); document.body.classList.add('no-scroll'); book.querySelector('.book-x').focus(); };
+  const closeBook = () => { book.classList.remove('open'); book.setAttribute('aria-hidden','true'); document.body.classList.remove('no-scroll'); };
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="https://tenpo.com/"]');
+    if (!a || a.id === 'book-ext' || e.metaKey || e.ctrlKey || e.shiftKey || innerWidth < 380) return;
+    e.preventDefault(); openBook(a.href);
+  });
+  book.querySelector('.book-x').addEventListener('click', closeBook);
+  book.addEventListener('click', e => { if (e.target === book) closeBook(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && book.classList.contains('open')) closeBook(); });
 
   // Enquiry: build the message, copy it, then open an Instagram DM to Total Baller.
   document.getElementById('enquiry').addEventListener('submit', async e => {
